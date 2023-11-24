@@ -1,0 +1,127 @@
+.promo {
+    margin: 0 auto;
+    padding: 90px 0 90px 0;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.header {
+    color: var(--, #0a121e);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.subheader {
+    margin: 0 auto;
+    width: 457px;
+    margin-top: 30px;
+    color: var(--, #3c3c3c);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    /* 166.667% */
+}
+
+.info_container {
+    height: 450px;
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info_desrc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.info_desrc_item {
+    width: 263px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.text {
+    margin-top: 30px;
+    color: var(--, #0a121e);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 26px;
+    /* 185.714% */
+}
+
+.main_image img {
+    width: 450px;
+    height: 450px;
+    border-radius: 40px;
+}
+
+.slider {
+    height: 892px;
+    padding: 90px 0 45px 0;
+    background-color: #3c3c3c;
+}
+
+.slider__header {
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: 0.84px;
+}
+
+.slider-for {
+    margin: 30px auto 1px;
+    overflow: hidden;
+    height: 420px;
+    width: 750px;
+}
+
+.slider-nav {
+    margin-top: 70px;
+    margin: 0 auto;
+    height: 165px;
+    width: 800px;
+}
+
+.slider-item {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.slider-item1 img {
+    display: block;
+    margin: 0 auto;
+    width: 700px;
+    height: 400px;
+    border-radius: 40px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.slider-item2 img {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 40px;
+    object-fit: cover;
+}

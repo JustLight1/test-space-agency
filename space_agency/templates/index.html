@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-TileColor" content="#000">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <title>
+        Последние обновления на сайте
+    </title>
+</head>
+<body>
+    <header>
+        {% include 'includes/header.html' %}
+    </header>
+    <main class="promo">
+        <div class="container">
+            <h1 class="header">Космическое агентство</h1>
+            <div class="subheader" id="about">
+                Национальное управление по аэронавтике и исследованию космического
+                пространства — ведомство, относящееся к федеральному правительству США
+                и подчиняющееся непосредственно президенту США.
+            </div>
+            <div class="info_container">
+                <div class="info_desrc">
+                    <div class="info_desrc_item">
+                        <div class="image">
+                            <img src="{% static 'icons/fa6-solid_shuttle-space.svg' %}" alt="" />
+                        </div>
+                        <div class="text">Спейс шаттлы — пилотируемые корабли</div>
+                    </div>
+                    <div class="info_desrc_item">
+                        <div class="image">
+                            <img src="{% static 'icons/ion_telescope.svg' %}" alt="" />
+                        </div>
+                        <div class="text">Лучшее телескопическое оборудование
+                        </div>
+                    </div>
+                    <div class="info_desrc_item">
+                        <div class="image">
+                            <img src="{% static 'icons/bi_moon-stars-fill.svg' %}" alt="" />
+                        </div>
+                        <div class="text">Целимся на Луну и Марс
+                        </div>
+                    </div>
+                    <div class="info_desrc_item">
+                        <div class="image">
+                            <img src="{% static 'icons/bxs_medal.svg' %}" alt="" />
+                        </div>
+                        <div class="text">Золотая медаль по научным исследованиям
+                        </div>
+                    </div>
+                </div>
+                <div class="main_image">
+                    <img src="{% static 'img/main.png' %}" alt="" />
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="slider">
+        <div class="container">
+            <h2 class="slider__header" id="photo">Фотографии</h2>
+            <div class="slider-for">
+                {% for item in slider_items %}
+                <div class="slider-item1">
+                    <img src="{{ item.image.url }}" alt="">
+                </div>
+                {% endfor %}
+            </div>
+            <div class="slider-nav">
+                {% for item in slider_items %}
+                <div class="slider-item2">
+                    <img src="{{ item.image.url }}" alt="">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.slider-for').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-nav',
+                centerMode: true,
+                infinite: true,
+            });
+            $('.slider-nav').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for',
+                dots: true,
+                centerMode: true,
+                focusOnSelect: true,
+                infinite: true,
+            });
+        });
+    </script>
+</body>
+</html>
