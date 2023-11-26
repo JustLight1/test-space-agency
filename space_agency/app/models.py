@@ -12,9 +12,11 @@ class SliderItem(models.Model):
                             on_delete=models.CASCADE,
                             related_name='slider_images')
     title = models.CharField(max_length=255, verbose_name='Название')
+    my_order = models.PositiveIntegerField(verbose_name='Поле для сортировки',
+                                           default=0, blank=False, null=False)
 
     class Meta:
-        ordering = ['-id']
+        ordering = ['my_order']
         verbose_name = 'Элемент слайдера'
         verbose_name_plural = 'Элементы слайдера'
 
